@@ -1,0 +1,99 @@
+# ANOTAÇÕES
+
+## GERAIS
+
+Clients: lado que consome a informação → através da internet (protocolo HTTP) → encontra o computador com a hospedagem do site.
+
+Servers: servem a informação.
+    Não necessariamente precisam de internet
+    Servidor tende a ser mais robusto porque exige processamento, comunicação entre vários dispositivos nele.
+    Existem diversos tipos: 1. de arquivos → computador central; 2. segurança (firewall); 3. streaming → soltando dados a serem consumidos; 4. e-mail → armazena e gerencia envios; 5. web → para internet.
+    Um servidor pode ser de vários tipos, mas pode afetar o desempenho.
+
+Arquivos estáticos: arquivos enviados do SERVER para o CLIENT.
+
+Cache: armazenamento para não ter que buscar novamente no servidor.
+
+
+> Existem padrões de comportamento dos navegadores (programas utilizados para abrir/executar arquivos). Ex. browse support HTML - W3Schools.
+
+
+Banco de dados: servidor pode se conectar. Ex. para buscar usuário e senha, produtos... (databases)
+
+Aplicações Web: são soluções criadas que possuem a internet como meio de comunicação entre Client x Server não sendo necessário a sua instalação.
+    Para instalar, precisa programar para o sistema operacional a ser utilizado.
+    Usa o navegador ao invés de acessar por meio de um aplicativo instalado no dispositivo.
+
+
+> É importante sempre levar em consideração a responsividade, considerando que o consumo de conteúdo no celular/dispositivos móveis é gigante e a tendência é aumentar.
+
+
+LAN (Local Area Network): rede local.
+
+Data centers: lugares que armazenam vários (conjunto) servidores.
+
+Softwares: parte lógica. Ex. sistemas operacionais, monitoramento e servidores web.
+
+Hardwares: parte física. Ex. armazenamento (disco rígido, SSDs), memória e processadores.
+
+Requisição HTTP: client pede requisição. Ex. digitou e deu enter → sistema operacional pede execução → servidor web processa e devolve a resposta. Ex. HTML, CSS, Js, imagens, texto...
+    Ou seja, o servidor tem um sistema operacional que tem instalado um servidor web → que vai processar as informações do HTTP.
+
+Servidor Proxy: se puder acessar a informação, encaminha para a internet. Se não, ele bloqueia.
+    Pode ser de validação.
+
+Firewall: barreira de segurança.
+    É um servidor, mas é um sistema instalado. Tem vários formatos.
+
+Intranet: servidor web sem internet (dentro de uma rede corporativa, ao invés de disponível no mundo)
+    Através da rede local, não por rede externa.
+
+Servidor DNS (Domain Name Service): detém lista de nomes e IPs
+    Serve para redirecionar um nome para um IP específico.
+    São responsáveis por fazer com que o domínio seja localizado na internet. Ex. fazer cadastro do domínio no Registro.br e configurar o registro para o servidor DNS correspondente.
+
+Hospedagem de sites: colocar os arquivos do site em um servidor que fica disponível na internet para os clients acessarem.
+
+Conexão FTP (File Transfer Protocol): conexão direta com o servidor para exclusivamente enviar e receber arquivos, ao invés de acessar página web.
+    Ex. Filezilla
+
+
+> O provedor de hospedagem fornece os dados de acesso FTP ao servidor.
+
+
+Linguagem de programação: é uma linguagem escrita e formal que especifica um conjunto de instruções e regras usadas para gerar programas (softwares).
+
+Linguagem server-side: linguagens que são executadas no servidor. Ex. PHP, Ruby, C#, Js (processado pelo NodeJs, cujo V8 é embutido para poder executar), Java...
+
+Linguagem client-side: linguagens que são executadas no cliente. Ex. Js (mas com particularidades diferentes do servidor. Neste caso, é processado pelo navegador).
+
+
+> O navegador é uma aplicação (programa de computador) instalado na máquina do cliente.
+
+Engine V8: Google criou e faz o processamento especificamente do Js.
+    Módulo, "sub programa" open source.
+    Mecanismo de execução e interpretação de Js.
+
+Node Js: programa que processa o V8.
+
+HTML: é uma linguagem, mas não de programação. É um arquivo de texto que tem limitadores interpretados pelo navegador. Ex. <tag>
+
+CSS: também é uma linguagem, um arquivo de marcação. Ex. ;
+
+Versionamento de código: os Sistemas de Controle de Versão (VCS), podem ser do tipo Centralizado ou Distribuído.
+    VCS Centralizado (CVCS): apenas um servidor central que contém todos os arquivos de versão (banco de versões), com áreas de trabalho conectadas ao servidor. Ex. CVS e subversion.
+        Desvantagem: se ficar fora do ar, não consegue salvar ou colaborar. Se o arquivo for corrompido ou tiver perda de dados sem backup adequado, perde todo o projeto.
+    VCS Distribuído (DVCS): o banco de versões é duplicado, cada um tem uma cópia que funciona como backup. Ex. git e mercurial.
+
+
+---
+
+## REFERÊNCIAS
+
+### Documentação
+* MDN 
+* W3C 
+* W3Schools
+
+### Sites
+* RedMonk Language Rankings (ranking das linguagens de programação)

@@ -26,7 +26,7 @@ Registrar de forma clara e objetiva o que venho aprendendo para facilitar revis�
 
 [anotacoes.txt](./anotacoes.txt)
 
-Contém explicações teóricas, conceitos principais, referências e recomendações.
+Contém explicações teóricas, conceitos principais, referências e insights sobre os temas estudados.
 
 ### 💙 git.txt
 
@@ -55,4 +55,4 @@ Contém os principais comandos e propriedades CSS, abordando estilização, posi
 ## 👩🏻 Autora
 
 Larissa Nakamura
-Estudante de desenvolvimento web iniciante, em transição de carreira e apaixonada por tecnologia.
+Estudante de desenvolvimento web, em transição de carreira e apaixonada por tecnologia.
