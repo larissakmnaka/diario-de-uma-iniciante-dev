@@ -15,7 +15,10 @@ Registrar de forma clara e objetiva o que venho aprendendo para facilitar revis�
 
 ## 🤓 Aulas
 
-- Curso Discover da Rocketseat ministrada por Mayk Brito
+- Curso Discover da Rocketseat, ministrada por Mayk Brito | [Curso gratuito de introdução à programação](https://www.rocketseat.com.br/discover)
+- Bootcamp Ri Happy da DIO | [Ri Happy - Front-end do zero](https://web.dio.me/track/f31d0ec6-b46a-47d6-b5ec-5dcd3766dacb)
+- Vídeo Git e Github, por Rafaella Ballerini | [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM&t=828s) 
+- Formação Full Stack da Rocketseat, ministrada por Mayk Brito e Rodrigo Gonçalves | [Formação Full-Stack](https://www.rocketseat.com.br/formacao/fullstack) 
 
 ## 📄 Arquivos
 
