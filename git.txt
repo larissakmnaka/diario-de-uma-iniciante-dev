@@ -28,14 +28,15 @@ cd ... → retorna a um diretório anterior
 
 git clone → clona repositório git remoto existente para um novo diretório (pasta) local
 
-git init → inicializa um repositório Git
+git init → inicializa um repositório vazio Git e adiciona automaticamente a branch master ou main
 
 
 ## COMMITAR
 
 git pull → "puxa" as alterações do repositório remoto para o local (busca e mescla)
 
-git add . → adiciona todos os arquivos
+git add → adiciona os arquivos para a área de preparação do Git
+    . → adiciona todos os arquivos
 
 git status → mostra o status da área de preparação
 
@@ -55,6 +56,8 @@ git commit --amend -m " " → altera mensagem do último commit
 
 git branch → lista as branches
 
+git branch -M " " → renomeia a branch (ramificação)
+
 git config init.defaultBranch → retorna a branch padrão
 
 git checkout main → retorna para a branch main 
@@ -62,3 +65,13 @@ git checkout main → retorna para a branch main
 git merge branchName → mescla alterações da branch com a main
 
 git branch -d branchName → exclui branch
+
+
+## remoto
+
+git remote add origin https://github.com/... → para referenciar. Faz a conexão entre o repositório local com o do github
+    Basta uma vez
+    Origin é um apelido/nome
+
+git push -u origin main → para enviar para o github pela primeira vez
+    Os próximos podem ser apenas git push

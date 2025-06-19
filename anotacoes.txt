@@ -80,6 +80,10 @@ HTML: é uma linguagem, mas não de programação. É um arquivo de texto que te
 
 CSS: também é uma linguagem, um arquivo de marcação. Ex. ;
 
+Markdown: linguagem de marcação simples.
+
+Readme.md: serve como instrução do projeto.
+
 Versionamento de código: os Sistemas de Controle de Versão (VCS), podem ser do tipo Centralizado ou Distribuído.
     VCS Centralizado (CVCS): apenas um servidor central que contém todos os arquivos de versão (banco de versões), com áreas de trabalho conectadas ao servidor. Ex. CVS e subversion.
         Desvantagem: se ficar fora do ar, não consegue salvar ou colaborar. Se o arquivo for corrompido ou tiver perda de dados sem backup adequado, perde todo o projeto.
@@ -92,6 +96,12 @@ Git: banco de versões
     Sistema de controle de versão distribuído (DVCS)
 
 Ataque de DDoS: ataque distribuído de negação de serviço.
+
+Fork: para adicionar um projeto no meu repositório.
+
+Pull request: solicitação para que as alterações feitas em uma branch sejam mescladas com outra.
+
+Repositórios: diretórios/pastas do git para armazenar os projetos.
 
 
 ---
