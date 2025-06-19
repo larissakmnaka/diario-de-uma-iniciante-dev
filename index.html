@@ -1,0 +1,54 @@
+<!-- HTTPS é um protocolo de transferência de hypertextos (imagens, html, css...) faz uma ligação procurando no domínio (ex. github.com). Esse domínio é transformado em um número, o endereço de IP, que é o endereço da máquina (ex. que guarda o github) -->
+<!DOCTYPE html> <!-- Define um documento html -->  
+<html lang="en"> <!-- Atributo ou Propriedade de linguagem -->
+  <!-- <head> e <body> são tags filhas ou nós (node) ou children, sendo <html> o parent (pai) -->
+  <head> <!-- Ajusta configurações do documento -->
+    <!-- Os recuos são chamados de identação -->
+    <!-- Abaixo, links da fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres da página. Aqui está permitindo caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport é tudo que é visível. Conteúdo com largura do dispositivo permite adaptar. Escala inicial sem zoom -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!-- href é um atributo para informar a referência, isto é, em que lugar do mundo se encontra. ./ significa que está na própria pasta -->
+  </head>
+  <body> 
+    <!-- Em cada um dos elementos HTML existem algumas regras CSS ocultas. Por exemplo, alguns elementos têm por padrão o display (visualização) block (ex. <li>, <div>) e outros têm por padrão o display inline (ex. <img>, <a>) -->
+
+    <div> <!-- Caixa genérica -->
+
+      <h1>Título Principal</h1> <!-- Tag de título, display block -->  
+      <p>Parágrafo</p> <!-- Tag de parágrafo, display block -->
+      <a href="https://github.com/larissakmnaka" target="_blank" rel="noopener noreferrer">GitHub da Lari</a> <!-- Tag de link, sendo que o atributo target recebe o valor _blank (abre o link em nova guia) -->
+      
+      <!-- A tag <img> tem dois atributos, sendo src para instruir em que lugar do mundo se encontra, e alt um texto alternativo visando: 1) caso não encontre a imagem, o que vai aparecer; 2) descrição para necessidade visual; e 3) descrição da imagem para o motor de busca (ex. google) -->
+      <img title="Larissa" src="https://github.com/larissakmnaka.png" alt="Imagem de uma japonesa de cabelo comprido e preto, sorrindo, com óculos, vestindo uma regata de gola alta e no fundo uma planta"> <!-- Imagem -->
+      <!-- O atributo title possibilita que um comentário apareça ao descansar o mouse em cima -->
+
+    </div>
+
+    <div id="identifier"> </div> <!-- identificador do elemento, sendo a # o seletor de id -->
+
+    <ul> <!-- Lista não ordenada -->
+      <li>Item 1</li> <!-- Item da lista -->
+      <li>Item 2</li>
+    </ul> 
+
+    <ol> <!-- Lista ordenada -->
+      <li>Item 1</li> 
+      <li>Item 2</li>
+    </ol>
+
+    <a href="#">Lugar nenhum</a> <!-- Com a # possibilita clicar, mas vai para lugar nenhum -->
+
+    <!-- Para o switch -->
+    <div id="switch" onclick="toggleMode()"> <!-- Procura a função no Js -->
+      <button></button> 
+      <span></span>
+    </div>
+
+    <footer>Rodapé</footer> <!-- Tag para o rodapé -->
+    <script src="script.js"></script>
+  </body>
+</html>

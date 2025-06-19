@@ -1,0 +1,152 @@
+/* O * é um seletor universal, então vai aplicar para todos os elementos */
+* {
+  /* Margin é o espaço entre um elemento e seus vizinhos */
+  /* Padding é o espaço entre o conteúdo do elemento e sua borda */
+  margin: 0; /* Para zerar todas as margens que por padrão o navegador coloca entre as tags */
+  padding: 0; /* Para zerar todo preenchimento interno */
+  box-sizing: border-box; /* Determina que a medida do tamanho da caixa seja através da borda (ou seja, mantém o widht e padding do container) */
+}
+
+/* Para o switch */
+:root {
+  --text-color: pink; /* Define as variáveis e substitui nos respectivos lugares com color: var(--text-color); */
+}
+
+#switch {
+  position: relative; /* Relativiza o absoluto */
+  margin-top: 25px;
+}
+
+#switch button {
+  position: absolute; /* Sobrepõe */
+  top: 50%;
+  transform: rotate(); /* Rotacionar */
+  transform: scale(); /* Escalar (maior ou menor) */
+  transform: translateY(-50%); /* Eixo y (vertical) */
+  z-index: 1; /* Muda os andares */
+}
+
+/* Para centralizar:
+  background -> background-position: center;
+  display block, por exemplo div -> width: larguraFixa + margin: auto;
+  display flex -> align-items: center + justify-content: center;
+  texto -> text-align: center
+*/
+
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+/* fundo */
+body {
+  background-color: pink; /* Cor de fundo */
+  background: rgba(255, 255, 255, 0.1); /* Para rgb 0 mín e 255 máx, tudo 255 é branco. Além disso, o a é transparência, de 0 a 1 */
+
+  background-image: url(https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); /* Imagem de fundo. Por padrão, repete */
+  background-repeat: no-repeat; /* Para não repetir a imagem de fundo */
+
+  background-position: center; /* Ponto de interesse */
+  background-position: top center; /* Eixo Y Top e Eixo X Center */
+
+  background-size: contain; /* Contém dentro do body, que pode estar com largura e altura definidas */
+  background-size: cover; /* Cobre o espaço visível */
+
+  /* shorthand/atalho de background segue a seguinte ordem: color image repeat position/size */
+  background: url(https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat top center/cover;
+
+  margin: auto; /* Ajuste automático da margem */
+  margin: 40px;
+}
+
+/* Título */
+h1 {
+  font-weight: bold; /* Peso da fonte */
+  font-size: 40px; /* Tamanho da fonte */
+  line-height: 50px; /* Altura da linha */
+  color: white; /* Cor da fonte */
+  margin: 20px auto 0 auto; /* Margin aceita até 4 propriedades: 1) se única, aplica para os 4 lados; 2) Se 2, aplica a 1ª em cima e embaixo e 2ª nas laterais; 3) se 3, 1ª em cima, 2ª nas laterais e 3ª embaixo; 4) se 4, 1ª em cima, 2ª direita, 3ª embaixo e 4ª esquerda */
+}
+
+p {
+  text-decoration: line-through; /* Tachado */
+  text-decoration: overline; /* Linha em cima */
+  text-decoration: underline; /* Sublinhado */
+}
+
+a {
+  display: none; /* Some com o elemento da tela */
+  display: block; /* Automaticamente faz a caixa ocupar toda a largura possível de tela, forçando que qualquer outro elemento passe para a linha debaixo. Em outras palavras, ocupa a largura da caixa */
+  display: inline; /* Fica em linha. Em outras palavras, ocupa só o tamanho do elemento. Em elementos inline, não é possível aplicar o margin: auto para centralizar, ou seja, precisaria transformar em block. Mas, todos os elementos inline vão aceitar que o pai defina */
+  display: flex;
+  justify-content: center; /* Centraliza os itens no eixo x (horizontal) */
+  align-items: center; /* Centraliza os itens no eixo y (vertical) */
+}
+
+/* Hover é um pseudo selector */
+a:hover {
+  color: palevioletred; /* Quando passa o mouse */
+}
+
+img {
+  border: 2px solid white; /* Borda */
+  height: 350px; /* Altura */
+  width: 350px; /* Largura */
+  width: 100vw; /* 100% da largura do viewport */
+  border-radius: 8px; /* Arredondamento de borda */
+  border-radius: 50%; /* Para fazer um círculo */
+}
+
+ul {
+  list-style: none; /* Tira o estilo da linha */
+  display: flex; /* Distribui proporcionalmente e naturalmente é row */
+  flex-direction: column; 
+  gap: 10px; /* Espaço entre os elementos */
+  max-width: 500px;
+}
+
+ul li {
+  width: 100%; /* Refere-se ao pai */
+  text-align: center;  
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0.557);
+  backdrop-filter: blur (4px);
+  border: 1px solid rgba(255, 118, 141, 0.547);
+  border-radius: 8px; /* Arredondamento de borda */
+}
+
+ul li:hover {
+  background-color: pink;
+  transition: background 0.2s; /* Para a transição, escolhe-se a propriedade (ex. all engloba tudo, fundo, borda, tamanho...) e o tempo */ 
+  animation: slide-in 0.4s forwards; /* Precisa criar o keyframe. Usa 2 valores iniciais para a propriedade (nome da animação criada e tempo) */
+  /* Forwards mantém o estado final da animação */
+}
+
+/* Media queries = consulta de mídias */
+/* @ = at rule */
+@media (max-width: 1148px) {
+    .filtros {
+        justify-content: center;
+    }
+    h1 {
+        display: none;
+    }
+}
+
+/* Animações */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 55%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 55%;
+  }
+  to {
+    left: 0;
+  }
+}
