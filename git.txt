@@ -1,0 +1,64 @@
+# COMANDOS
+
+## ATALHOS
+
+ctrl + L ou clear → limpar
+
+↑ → seleciona o que foi digitado acima
+
+
+## CONFIGURAÇÃO
+
+git -v → para ver a versão git
+
+git config --global user.name " " → configurar nome do usuário
+
+git config --global user.mail " " → configurar email do usuário
+
+git config --global init.defaultBranch main → altera o nome da branch para "main"
+
+git config --global credential.helper cache → deixa salvo o token do github temporariamente
+
+git config --global credential.helper store → deixa salvo o token do github permanentemente
+
+
+## CRIAÇÃO DO REPOSITÓRIO LOCAL
+
+cd ... → retorna a um diretório anterior
+
+git clone → clona repositório git remoto existente para um novo diretório (pasta) local
+
+git init → inicializa um repositório Git
+
+
+## COMMITAR
+
+git pull → "puxa" as alterações do repositório remoto para o local (busca e mescla)
+
+git add . → adiciona todos os arquivos
+
+git status → mostra o status da área de preparação
+
+git commit -m " " → faz o commit
+
+git push → "empurra" as alterações do repositório local para o remoto
+
+git log → mostra lista de commits
+
+
+## ALTERAR COMMIT
+
+git commit --amend -m " " → altera mensagem do último commit
+
+
+## BRANCHES
+
+git branch → lista as branches
+
+git config init.defaultBranch → retorna a branch padrão
+
+git checkout main → retorna para a branch main 
+
+git merge branchName → mescla alterações da branch com a main
+
+git branch -d branchName → exclui branch

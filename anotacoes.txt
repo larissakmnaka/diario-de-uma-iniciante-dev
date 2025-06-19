@@ -85,6 +85,14 @@ Versionamento de código: os Sistemas de Controle de Versão (VCS), podem ser do
         Desvantagem: se ficar fora do ar, não consegue salvar ou colaborar. Se o arquivo for corrompido ou tiver perda de dados sem backup adequado, perde todo o projeto.
     VCS Distribuído (DVCS): o banco de versões é duplicado, cada um tem uma cópia que funciona como backup. Ex. git e mercurial.
 
+Github: servidor
+    Plataforma de hospedagem de código para controle de versão com Git e colaboração.
+
+Git: banco de versões
+    Sistema de controle de versão distribuído (DVCS)
+
+Ataque de DDoS: ataque distribuído de negação de serviço.
+
 
 ---
 
