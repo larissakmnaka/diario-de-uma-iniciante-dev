@@ -1,6 +1,13 @@
 # ANOTAÇÕES
-
+---
 ## GERAIS
+
+
+> Codar, desenvolver, programar, é resolver problemas do mundo real através das linhas de código.
+
+
+Código: pequena instrução.
+    Existem códigos em muitos eletrônicos. Ex. microondas, semáforos, roteadores, avião...
 
 Clients: lado que consome a informação → através da internet (protocolo HTTP) → encontra o computador com a hospedagem do site.
 
@@ -28,6 +35,11 @@ Aplicações Web: são soluções criadas que possuem a internet como meio de co
 > É importante sempre levar em consideração a responsividade, considerando que o consumo de conteúdo no celular/dispositivos móveis é gigante e a tendência é aumentar.
 
 
+WWW (World Wide Web): rede mundial de computadores. Web → teia (tem pontos interligados).
+    Todo serviço construído na estrutura da internet. Ex. email, site, streaming... É um serviço web.
+
+Programação web: construção (através de arquivos e linguagens de programação) dos serviços na estrutura da internet → web (disponibilizados por meio da internet → rede externa).
+
 LAN (Local Area Network): rede local.
 
 Data centers: lugares que armazenam vários (conjunto) servidores.
@@ -45,10 +57,16 @@ Servidor Proxy: se puder acessar a informação, encaminha para a internet. Se n
 Firewall: barreira de segurança.
     É um servidor, mas é um sistema instalado. Tem vários formatos.
 
+Internet: rede externa. Inter → interligada; Net → rede.
+    Espinha dorsal da web, pois não seria possível sem interligação.
+
 Intranet: servidor web sem internet (dentro de uma rede corporativa, ao invés de disponível no mundo)
     Através da rede local, não por rede externa.
+    Rede interna.
 
-Servidor DNS (Domain Name Service): detém lista de nomes e IPs
+DNS (Domain Name Service): sistema que converte IP em domínio e vice-versa.
+
+Servidor DNS: detém lista de nomes e IPs
     Serve para redirecionar um nome para um IP específico.
     São responsáveis por fazer com que o domínio seja localizado na internet. Ex. fazer cadastro do domínio no Registro.br e configurar o registro para o servidor DNS correspondente.
 
@@ -60,6 +78,31 @@ Conexão FTP (File Transfer Protocol): conexão direta com o servidor para exclu
 
 > O provedor de hospedagem fornece os dados de acesso FTP ao servidor.
 
+
+Webpage (Página Web). Ex. blog, artigos, catálogo, produtos, sobre, contato.
+
+Website: agrupamento estruturado de páginas web. Ex. home → contém diversas webpages.
+
+Site dinâmico: página se adapta conforme o pedido (request).
+    Servidor busca as informações no banco de dados. Ex. acessar um perfil.
+
+Site estático: não se altera.
+
+Web Application (Aplicativo Web): Um programa ou software de um servidor.
+    É mais complexo e possui mais requisitos.
+
+Programa: usuário interage.
+    Conjunto de muitas instruções (códigos).
+
+Software: controlam hardwares.
+
+Tradicional Web Application: resposta fixa.
+    Faz todo o fluxo de novo. Ex. Wordpress.
+
+Single Page Application: faz o pedido para local específico.
+    Não atualiza a página toda, muda apenas o solicitado. Ex. react.
+
+URL (Uniform Resource Locator): localizador uniforme de recursos.
 
 Linguagem de programação: é uma linguagem escrita e formal que especifica um conjunto de instruções e regras usadas para gerar programas (softwares).
 
@@ -80,7 +123,15 @@ HTML: é uma linguagem, mas não de programação. É um arquivo de texto que te
 
 CSS: também é uma linguagem, um arquivo de marcação. Ex. ;
 
-Markdown: linguagem de marcação simples.
+HTTP (Hypertext Transfer Protocol): protocolo de transferência de hypertextos (imagens, html, css...).
+    Faz uma ligação procurando no domínio. Ex. Github → esse domínio é transformado em um número (endereço de IP).
+
+Endereço de IP (Internet Protocol): endereço da máquina. Ex. que guarda o Github.
+    Conjunto de regras da internet que define em que lugar do mundo se encontra.
+
+HTTPS (Hypertext Transfer Protocol Secure): forma mais segura.
+
+Markdown: linguagem de marcação  simples.
 
 Readme.md: serve como instrução do projeto.
 
@@ -103,15 +154,127 @@ Pull request: solicitação para que as alterações feitas em uma branch sejam 
 
 Repositórios: diretórios/pastas do git para armazenar os projetos.
 
+Algoritmos e lógica de programação:
+    Algoritmos → 1. sequência de passos; 2. lógica; 3. finita; 4. resolver um problema.
+    Fases da resolução de um problema → 1. entender o problema; 2. coletar dados; 3. processar os dados; 4. apresentar os dados.
+
+Variáveis: guardam uma informação para ser usada mais tarde
+
+Operadores podem ser:
+    Atribuição de valor =
+    Concatenação (junta) + strings (" " , ' ' , ` `)
+    Cálculos matemáticos + , - , * , / , % (resto da divisão)
+    Comparação == , >= , <= , > , < , != (diferente)
+    Lógicos && (e), || (ou), ! (negar)
+
+Os tipos de dados primitivos representam os valores que um programa pode manipular podem ser: textos (string), números (number) ou lógicos (boolean).
+
+Estrutura de dados → Ex. lista (array), função, objetos.
+
+Controle de fluxo → Ex. condicional, switch.
+
+Estrutura de repetição → Ex. for, while.
+
+Palavras reservadas → Ex. for, while, true, false, if, else, const, let, function, class.
+
+Identação: o recuo
+
+Protocolo: conjunto de regras
+    O protocolo de um arquivo (file) não é o conjunto de regras que precisa para simular um servidor (Ex. live server).
+    Para chegar "no computador em algum lugar do mundo" (servidor), precisa do endereço de IP.
+
+
+> Em cada um dos elementos HTML existem algumas regras CSS ocultas.
+
+> Programação é ensinar o computador através de:
+    Algoritmo: sequência de passos, conjunto de regras.
+    Lógica de programação: maneira de pensar.
+    Sintaxe: maneira correta de escrever.
+
+> O computador não pensa, só executa tarefas e faz cálculos → input e output (recebe e devolve comandos).
+    Só entende a língua binária (01010101 → ligado e desligado).
+
+
+Variáveis: caixinha onde guardamos um tipo de dado para usar mais tarde.
+    Tipos de dados: Informações (Ex. textos, números); Booleanos (valores lógicos: verdadeiro ou falso); ou Dados mais estruturados (Ex. objeto).
+
+Funções: servem para agrupamento de código; reuso de código; mini programas dentro do programa maior; toda linguagem oferece muitas opções.
+
+Caminhos (path):
+    Absolutos → referencia tudo.
+    Relativos → Ex. ./ (resumido).
+        ../ (sobe de pasta).
+        / → root, raíz.
+
+Overflow: quando transborda.
+
+Margin collapse: a margem combina/sobrepõe à outra.
+
+Fallback: segundo plano.
+
+Case sensitive: sensível a letras maiúsculas e minúsculas.
 
 ---
+## CORREÇÕES DE QUIZZES
 
+### Qual é a sintaxe correta para criar um link em HTML?
+    <a href="https://...">link text</a>
+
+### Qual é a função do arquivo "settings.json" no VSCode?
+    Definir as configurações globais do editor, como fonte e forma.
+
+### O que é o margin e o padding em CSS?
+    O margin é o espaço entre um elemento e seus vizinhos, enquanto o padding é o espaço entre o conteúdo do elemento e sua borda.
+
+### O que são pseudosseletores no CSS?
+    São uma forma de selecionar elementos HTML com base em seu estado ou posição em relação a outros elementos.
+
+
+---
+## EXTENSÕES PARA O VSCODE
+* portuguese (Brazil)
+* live server
+* omni theme
+* material icon theme
+* prettier - code formatter
+
+---
+## ATALHOS PARA O VSCODE
+* alt + setas → mover linhas
+* alt + cliques → funciona como ctrl selecionando
+* shift + alt + clicar e arrastar → seleciona tudo como shift
+* shift pressionado + seta → seleciona
+* ctrl + seta → vai para o final
+
+---
+## EXTENSÕES PARA O GOOGLE CHROME
+* momentum
+
+---
 ## REFERÊNCIAS
 
 ### Documentação
 * MDN 
 * W3C 
 * W3Schools
+* Devdocs.io
+
+### Anotações
+* Obsidian
+
+### Divertido
+* Scratch.mit.edu 
+* Tldraw (desenho)
+* Fronteditor (editor de código online)
+* Vscode.dev (editor de código online)
+* Javascript playground (editor javascript online)
+* Code pen (editor de código online)
 
 ### Sites
 * RedMonk Language Rankings (ranking das linguagens de programação)
+* Scratchbrasil.org.br
+* CSS Tricks
+* Can I Use (para ver a compatibilidade com os browsers)
+* Whimsical (mapa mental)
+* IonIcons (site de ícones)
+* Lucide (site de ícones)

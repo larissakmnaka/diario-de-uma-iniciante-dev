@@ -1,3 +1,26 @@
+/* CSS (Cascating Style Sheets): folhas de estilo em cascata
+  Cascata: prevalece o que vier depois, desde que outra declaração não tenha peso maior.
+  Especificidade: determina pesos diferentes para os elementos (é possível cumular).
+    Mais específico: atributo style direto na tag do html → !important
+*/
+
+/* [] → seletor de atributo. Ex. title.
+
+Combinator
+  Descendent: seleciona filho. Ex. article p {
+  List: separa por vírgulas. Ex. span, mark {
+  Next sibling: funciona com + e seleciona o irmão próximo. Ex. p + p {
+  Child: usa > e vai considerar o primeiro filho/nível. Ex. aside > ul {
+*/
+
+/* Anatomia:
+Declaration → através delas, muda o comportamento dos elementos. É todo o conjunto.
+  Selector: seleciona tags
+  { } Context: par de chaves cria o contexto
+  Properties: propriedades antes dos :
+  Property value: valor das propriedades antes dos ;
+*/
+
 /* O * é um seletor universal, então vai aplicar para todos os elementos */
 * {
   /* Margin é o espaço entre um elemento e seus vizinhos */
@@ -5,6 +28,8 @@
   margin: 0; /* Para zerar todas as margens que por padrão o navegador coloca entre as tags */
   padding: 0; /* Para zerar todo preenchimento interno */
   box-sizing: border-box; /* Determina que a medida do tamanho da caixa seja através da borda (ou seja, mantém o widht e padding do container) */
+    /* Respeita a largura do pai (caixa calculada de borda a borda) */
+    /* O padrão é content-box: faz a soma do conteúdo */
 }
 
 /* Para o switch */
@@ -41,15 +66,18 @@ body * {
 body {
   background-color: pink; /* Cor de fundo */
   background: rgba(255, 255, 255, 0.1); /* Para rgb 0 mín e 255 máx, tudo 255 é branco. Além disso, o a é transparência, de 0 a 1 */
+    /* RGB hexadecimal → 16 dígitos de 0 (preto total) a F (branco total)
+      RGB - RRGGBB - RGBA - RRGGBBAA (alfa: transparência) */ 
 
   background-image: url(https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); /* Imagem de fundo. Por padrão, repete */
   background-repeat: no-repeat; /* Para não repetir a imagem de fundo */
+  background-repeat: repeat-x; /* Repete só nos eixos x ou y */
 
   background-position: center; /* Ponto de interesse */
   background-position: top center; /* Eixo Y Top e Eixo X Center */
 
   background-size: contain; /* Contém dentro do body, que pode estar com largura e altura definidas */
-  background-size: cover; /* Cobre o espaço visível */
+  background-size: cover; /* Cobre o espaço conforme a necessidade (se precisar passar de tamanho, vai passar) */
 
   /* shorthand/atalho de background segue a seguinte ordem: color image repeat position/size */
   background: url(https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat top center/cover;
@@ -65,16 +93,21 @@ h1 {
   line-height: 50px; /* Altura da linha */
   color: white; /* Cor da fonte */
   margin: 20px auto 0 auto; /* Margin aceita até 4 propriedades: 1) se única, aplica para os 4 lados; 2) Se 2, aplica a 1ª em cima e embaixo e 2ª nas laterais; 3) se 3, 1ª em cima, 2ª nas laterais e 3ª embaixo; 4) se 4, 1ª em cima, 2ª direita, 3ª embaixo e 4ª esquerda */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  word-spacing: 2px; /* Espaçamento entre palavras */
 }
 
 p {
   text-decoration: line-through; /* Tachado */
   text-decoration: overline; /* Linha em cima */
   text-decoration: underline; /* Sublinhado */
+  text-transform: uppercase; /* Caixa alta */
+  text-transform: lowercase; /* Minúsculas */
+  text-transform: capitalize; /* Toda primeira maiúscula */
 }
 
 a {
-  display: none; /* Some com o elemento da tela */
+  display: none; /* Apresentação: some com o elemento da tela */
   display: block; /* Automaticamente faz a caixa ocupar toda a largura possível de tela, forçando que qualquer outro elemento passe para a linha debaixo. Em outras palavras, ocupa a largura da caixa */
   display: inline; /* Fica em linha. Em outras palavras, ocupa só o tamanho do elemento. Em elementos inline, não é possível aplicar o margin: auto para centralizar, ou seja, precisaria transformar em block. Mas, todos os elementos inline vão aceitar que o pai defina */
   display: flex;
@@ -89,11 +122,13 @@ a:hover {
 
 img {
   border: 2px solid white; /* Borda */
+  width: 100vw; /* 100% da largura do viewport */
   height: 350px; /* Altura */
   width: 350px; /* Largura */
-  width: 100vw; /* 100% da largura do viewport */
   border-radius: 8px; /* Arredondamento de borda */
   border-radius: 50%; /* Para fazer um círculo */
+  border-style: dotted; /* Pontilhado */
+  border-style: double; /* Dupla */
 }
 
 ul {

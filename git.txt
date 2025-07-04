@@ -1,12 +1,27 @@
 # COMANDOS
 
+## RESUMO
+git pull - para trazer modificações
+git status - para ver minhas modificações
+git add - para adicionar no stage
+git commit -m "<mensagem>" - para commitar
+git push - para enviar
+
+
+---
 ## ATALHOS
+
+ctrl + J → abre o terminal no VSCode
 
 ctrl + L ou clear → limpar
 
 ↑ → seleciona o que foi digitado acima
 
+. → se estiver em um repositório do github, abre um vscode online.
+    Altera a url de github.com para github.dev.
 
+
+---
 ## CONFIGURAÇÃO
 
 git -v → para ver a versão git
@@ -22,36 +37,48 @@ git config --global credential.helper cache → deixa salvo o token do github te
 git config --global credential.helper store → deixa salvo o token do github permanentemente
 
 
+---
 ## CRIAÇÃO DO REPOSITÓRIO LOCAL
 
-cd ... → retorna a um diretório anterior
+cd ... → retorna a um diretório anterior (change directory)
+
+pwd → mostra o caminho até a pasta
 
 git clone → clona repositório git remoto existente para um novo diretório (pasta) local
+    Antes, dar o comando cd para ir para o local. Ex. cd desktop.
 
 git init → inicializa um repositório vazio Git e adiciona automaticamente a branch master ou main
 
 
+---
 ## COMMITAR
 
 git pull → "puxa" as alterações do repositório remoto para o local (busca e mescla)
 
-git add → adiciona os arquivos para a área de preparação do Git
+git add → adiciona os arquivos para a área de preparação do Git (stage)
     . → adiciona todos os arquivos
+
+git rm --cached < > → remove arquivo do stage
+
+git restore → restaura arquivo.
+    Quando está insatisfeito com as mudanças ou apaga.
 
 git status → mostra o status da área de preparação
 
-git commit -m " " → faz o commit
+git commit -m " " → cria e descreve um commit
 
 git push → "empurra" as alterações do repositório local para o remoto
 
 git log → mostra lista de commits
 
 
+---
 ## ALTERAR COMMIT
 
 git commit --amend -m " " → altera mensagem do último commit
 
 
+---
 ## BRANCHES
 
 git branch → lista as branches
@@ -67,7 +94,8 @@ git merge branchName → mescla alterações da branch com a main
 git branch -d branchName → exclui branch
 
 
-## remoto
+---
+## REMOTO
 
 git remote add origin https://github.com/... → para referenciar. Faz a conexão entre o repositório local com o do github
     Basta uma vez

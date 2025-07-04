@@ -5,7 +5,8 @@
   <head> <!-- Ajusta configurações do documento -->
     <!-- Os recuos são chamados de identação -->
     <!-- Abaixo, links da fonte Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link> é mais rápido que @import. É bom deixar no começo do <head>, por conta da velocidade na leitura do html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Relação de pré conexão -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap" rel="stylesheet">
     <meta charset="UTF-8"> <!-- Define o conjunto de caracteres da página. Aqui está permitindo caracteres especiais -->
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="style.css"> <!-- href é um atributo para informar a referência, isto é, em que lugar do mundo se encontra. ./ significa que está na própria pasta -->
   </head>
   <body> 
-    <!-- Em cada um dos elementos HTML existem algumas regras CSS ocultas. Por exemplo, alguns elementos têm por padrão o display (visualização) block (ex. <li>, <div>) e outros têm por padrão o display inline (ex. <img>, <a>) -->
+    <!-- Em cada um dos elementos HTML existem algumas regras CSS ocultas. Por exemplo, alguns elementos têm por padrão o display (visualização) block (ex. <li>, <div>) e outros têm por padrão o display inline (ex. <img>, <a>, <span>, <strong>, <em>) -->
 
     <div> <!-- Caixa genérica -->
 
@@ -22,9 +23,26 @@
       <p>Parágrafo</p> <!-- Tag de parágrafo, display block -->
       <a href="https://github.com/larissakmnaka" target="_blank" rel="noopener noreferrer">GitHub da Lari</a> <!-- Tag de link, sendo que o atributo target recebe o valor _blank (abre o link em nova guia) -->
       
+      <a href="#identifier">Fragmento</a> <!-- Fragmento do site -->
+
       <!-- A tag <img> tem dois atributos, sendo src para instruir em que lugar do mundo se encontra, e alt um texto alternativo visando: 1) caso não encontre a imagem, o que vai aparecer; 2) descrição para necessidade visual; e 3) descrição da imagem para o motor de busca (ex. google) -->
       <img title="Larissa" src="https://github.com/larissakmnaka.png" alt="Imagem de uma japonesa de cabelo comprido e preto, sorrindo, com óculos, vestindo uma regata de gola alta e no fundo uma planta"> <!-- Imagem -->
       <!-- O atributo title possibilita que um comentário apareça ao descansar o mouse em cima -->
+
+      <!-- Atributos configuram a tag (marcação) -->
+      <!-- Aninhamento de tags → as tags podem ficar dentro de outras -->
+      <br/> <!-- Quebra de linha (break) -->
+      <p>Espaço a seguir&nbsp;<em>itálico</em> <strong>negrito</strong> <mark>grifado</mark> <s>tachado</s></p>
+      <pre>Espaços   Quebra de linha 
+        linha
+
+        linha
+      </pre> <!-- Leva em consideração espaços e quebras de linha -->
+
+      <!-- Servem para mostrar caracteres reservados. Ex. &lt;p&gt; → <p> e &amp;gt → &gt -->
+      &lt; <!-- Less than < -->
+      &gt; <!-- Greater than > -->
+      &amp; <!-- Ampersand & -->
 
     </div>
 
@@ -45,10 +63,22 @@
     <!-- Para o switch -->
     <div id="switch" onclick="toggleMode()"> <!-- Procura a função no Js -->
       <button></button> 
-      <span></span>
+      <span></span> <!-- Por ter comportamento inline, o widht e height não se aplicam; margin, padding e border aplicam, mas só os valores horizontais -->
+        <!-- Margin: só aplica nas laterais; Padding: não vai empurrar o que estiver em cima e embaixo (é como se estivesse sobrepondo), apenas espande nas laterais; Border: mesma coisa, não se empurram nem se organizam -->
     </div>
 
-    <footer>Rodapé</footer> <!-- Tag para o rodapé -->
-    <script src="script.js"></script>
+    <!-- Tags estruturais -->
+    <header>Cabeçalho</header> 
+    <main>Conteúdo principal</main>
+    <aside>Conteúdo secundário</aside> <!-- Podem ser referências do conteúdo principal, tanto para estender informações do principal, quanto para ficar na lateral mais conteúdos -->
+    <nav>Navegação</nav>
+      <a href=" ">logo</a>
+      <ul></ul>
+      <li></li>
+    <section>Seção</section> <!-- É bom nomear com #id e usar <h2> -->
+    <article>Artigo</article>
+    <footer>Rodapé</footer> 
+
+    <script src="script.js"></script> <!-- Ao final para carregar a página primeiro e não correr o risco de apresentar lentidão -->
   </body>
 </html>
