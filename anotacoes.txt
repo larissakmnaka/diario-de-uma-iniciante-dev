@@ -240,11 +240,15 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 
 ---
 ## ATALHOS PARA O VSCODE
-* alt + setas → mover linhas
-* alt + cliques → funciona como ctrl selecionando
-* shift + alt + clicar e arrastar → seleciona tudo como shift
 * shift pressionado + seta → seleciona
 * ctrl + seta → vai para o final
+* alt + setas → mover linhas
+* alt + shift + setas → duplica linha
+* ctrl + d → seleciona comandos iguais
+* alt + cliques → funciona como ctrl selecionando
+* shift + alt + clicar e arrastar → seleciona tudo como shift
+
+* div.container>(h2+div+button) → cria tudo de uma vez
 
 ---
 ## EXTENSÕES PARA O GOOGLE CHROME
