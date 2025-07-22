@@ -249,6 +249,7 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 * shift + alt + clicar e arrastar → seleciona tudo como shift
 
 * div.container>(h2+div+button) → cria tudo de uma vez
+* ul.piano-keys>(li.key>span)*16
 
 ---
 ## EXTENSÕES PARA O GOOGLE CHROME
