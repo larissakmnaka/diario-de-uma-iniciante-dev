@@ -282,3 +282,8 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 * Whimsical (mapa mental)
 * IonIcons (site de ícones)
 * Lucide (site de ícones)
+* CSS Gradient Generator (gera gradientes para usar no CSS)
+
+---
+## PROGRAMAS
+* Just Color Picker (seleciona cores e apresenta o valor hexadecimal)
