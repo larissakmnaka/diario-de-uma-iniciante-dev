@@ -240,6 +240,11 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 
 ---
 ## ATALHOS PARA O VSCODE
+* ctrl + shift direito + p → pesquisa configurações
+* ctrl + shift direito + p e pesquisa wrap → quebra linhas de código
+* ctrl + b → esconde ou mostra menu lateral
+* ctrl + k + z → zen mode (só código)
+
 * shift pressionado + seta → seleciona
 * ctrl + seta → vai para o final
 * alt + setas → mover linhas
@@ -250,6 +255,7 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 
 * div.container>(h2+div+button) → cria tudo de uma vez
 * ul.piano-keys>(li.key>span)*16
+* (div.column>span)*2
 
 ---
 ## EXTENSÕES PARA O GOOGLE CHROME
