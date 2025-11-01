@@ -214,6 +214,8 @@ Fallback: segundo plano.
 
 Case sensitive: sensível a letras maiúsculas e minúsculas.
 
+Hue: tonalidade da cor.
+
 ---
 ## CORREÇÕES DE QUIZZES
 
@@ -229,6 +231,8 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 ### O que são pseudosseletores no CSS?
     São uma forma de selecionar elementos HTML com base em seu estado ou posição em relação a outros elementos.
 
+### Como acessar variáveis CSS dentro de uma folha de estilo?
+    Usando a função var(--nome-da-variável).
 
 ---
 ## EXTENSÕES PARA O VSCODE

@@ -21,6 +21,26 @@ Declaration → através delas, muda o comportamento dos elementos. É todo o co
   Property value: valor das propriedades antes dos ;
 */
 
+/* Tableless (sem tabela). Parou-se de utilizar no html <table>.
+  Flexbox
+  Grid → grade → coluna e linhas
+  Overflow: scroll
+*/
+
+/* Flexbox
+  Concepts/conceitos:
+    Flex container (caixa, pai → tem os itens/filhos)
+    Flex item
+    Axis (eixo) main → start (principal e cruzado têm início e fim) e end
+    Axis cross → start e end
+    Sizing → tamanho modificado (sem largura)
+
+  Direction/direcionamento:
+    Flex direction
+      Inversão de eixo
+      Valores → row, column ou reverse (row → direita para esquerda; ou column reverse → baixo para cima = inverte o start e end)
+*/
+
 /* O * é um seletor universal, então vai aplicar para todos os elementos */
 * {
   /* Margin é o espaço entre um elemento e seus vizinhos */
@@ -185,3 +205,4 @@ ul li:hover {
     left: 0;
   }
 }
+
