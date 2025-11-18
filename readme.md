@@ -12,6 +12,7 @@ Registrar de forma clara e objetiva o que venho aprendendo para facilitar revis�
 - CSS
 - Git
 - JavaScript
+- VBA
 
 ## 🤓 Aulas
 
@@ -25,7 +26,7 @@ Registrar de forma clara e objetiva o que venho aprendendo para facilitar revis�
 
 ## 📄 Arquivos
 
-### 💙 anotacoes.txt
+### 🤍 anotacoes.txt
 
 [anotacoes.txt](./anotacoes.txt)
 
@@ -54,6 +55,12 @@ Lista os comandos e estruturas básicas do JavaScript.
 [style.css](./style.css)
 
 Contém os principais comandos e propriedades CSS, abordando estilização, posicionamento, layout e responsividade.
+
+### 💚 vba.txt
+
+[vba.txt](./vba.txt)
+
+Básico de VBA.
 
 ## 👩🏻 Autora
 

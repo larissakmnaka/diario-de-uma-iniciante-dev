@@ -1,0 +1,45 @@
+Sub main()
+
+    a = 1
+    b = 2
+    x = "teste"
+
+    Cells(1, a) = "col a"
+    Cells(1, b) = "col b"
+    Cells(2, a) = a
+    Cells(2, b) = b
+    Cells(3, a) = a + b
+    Cells(3, b) = b * b
+    Cells(4, a) = x
+    Cells(4, b) = x
+    
+End Sub
+
+
+Sub repeticao(repetir, coluna)
+    
+    Cells(1, coluna) = "col a"
+    
+    For l = 2 To repetir + 1
+    
+        Cells(l, coluna) = l - 1
+        
+    Next l
+    
+End Sub
+
+
+Sub chamarrepeticao()
+
+    Call repeticao(400, 1)
+
+    Call repeticao(500, 2)
+    
+End Sub
+
+
+Function larissa(amornumerico)
+
+    larissa = amornumerico * 2
+    
+End Function
