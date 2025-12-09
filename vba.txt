@@ -1,3 +1,5 @@
+'Primeira aula
+
 Sub main()
 
     a = 1
@@ -15,7 +17,6 @@ Sub main()
     
 End Sub
 
-
 Sub repeticao(repetir, coluna)
     
     Cells(1, coluna) = "col a"
@@ -28,7 +29,6 @@ Sub repeticao(repetir, coluna)
     
 End Sub
 
-
 Sub chamarrepeticao()
 
     Call repeticao(400, 1)
@@ -37,9 +37,68 @@ Sub chamarrepeticao()
     
 End Sub
 
-
 Function larissa(amornumerico)
 
     larissa = amornumerico * 2
     
 End Function
+
+
+'Segunda aula
+
+Sub main()
+
+    For linhaRef = 2 To 4 'Inicia um loop começando da linhaRef 2 até 4
+        Call somaValores(linhaRef)
+        Call somaMeta(linhaRef)
+        Call porcentagem(linhaRef)
+        
+    Next linhaRef
+      
+End Sub
+
+Sub somaValores(linhaRef) 'Declara uma Sub chamada "somaValores" que recebe um parâmetro chamado "linhaRef"
+
+        somaValor = 0 'Cria variável e atribui valor 0
+        linhaFinal = 13
+
+        For linha = 2 To linhaFinal 'Inicia loop da linha 2 até "linhaFinal"
+            
+            Status = Cells(linha, 10) 'Variável "Status" vai ler valor da célula (variável "linha", coluna J)
+                        
+            If Status = Cells(linhaRef, 1) Then 'Se "Status" da linha atual for igual ao valor da célula (variável "linhaRef", coluna A)
+                somaValor = somaValor + Cells(linha, 11) 'Então o valor da coluna K entrará na soma
+            End If
+                    
+        Next linha 'Continua para o próximo valor de linha
+        
+        Cells(linhaRef, 2) = somaValor 'Depois que o loop termina, preenche o resultado na célula (variável linhaRef, coluna B)
+
+End Sub
+
+Sub somaMeta(linhaRef)
+
+    somaValor = 0
+    linhaFinal = 4
+    
+    For linha = 2 To linhaFinal
+    
+        Status = Cells(linha, 14)
+        
+        If Status = Cells(linhaRef, 1) Then
+            somaValor = somaValor + Cells(linha, 15)
+        End If
+    
+    Next linha
+    
+    Cells(linhaRef, 3) = somaValor
+
+End Sub
+
+Sub porcentagem(linhaRef)
+
+    porc = Cells(linhaRef, 2) / Cells(linhaRef, 3)
+    
+    Cells(linhaRef, 4) = porc
+
+End Sub
