@@ -59,3 +59,93 @@ function toggleMode() { // Para alterar modo
     img.setAttribute("alt", "Foto de uma japonesa sorrindo de óculos, com a cabeça reta")
   }
 }
+
+// DOM (Document Object Model): é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web.
+  // Representa o documento (document) com nós (documentos filhos ou children. Ex. <head> e <body> → element, dentro do <HTML> → root element) e objetos (estrutura de árvore) que pode ser acessado e modificado.
+
+// Document: é uma variável especial que já é do JavaScript, já está disponível para ser acessada sem precisar criar, só chamar.
+
+// Visualizar o conteúdo do document → faz referência aos elementos do documento
+console.log (document)
+
+// Obter o title da página
+console.log (document.title)
+
+// Acessar elemento pelo ID
+const guest = document.getElementById("guest-2") // Método dentro do document que permite acessar elementos pelo ID
+console.log(guest) // Assim, vai exibir o conteúdo
+console.log(guest.textContent) // Assim, retorna o conteúdo como texto
+
+const guest = document.querySelector("#guest-2") // Acessa o elemento pelo seletor ID
+
+// Acessar o elemento pelo seletor class
+const guests = document.querySelector(".guest") // Vai sempre retornar somente o primeiro encontrado
+
+// Mostrar as propriedades do objeto
+console.dir(guest)
+
+// Alterar conteúdo
+guest.textContent = "João" 
+
+// Alterar conteúdo dentro da span
+const guest = document.querySelector("#guest-1 span")
+guest.textContent = "Maria" 
+
+// Diferença entre console.log
+console.log(guest.textContent) // Retorna o conteúdo visível e oculto
+console.log(guest.innerText) // Retorna somente o conteúdo visível
+console.log(guest.innerHTML) // Retorna o HTML como texto 
+
+// Adicionar classe
+input.classList.add("input-error")
+
+// Remover classe
+input.classList.remove("input-error")
+
+// Se tiver, remove. Se não tiver, adiciona
+input.classList.toggle("input-error")
+
+// Modificar as propriedades CSS do elemento
+button.style.backgroundColor = "red"
+
+// Criar elementos
+const guests = document.querySelector("ul")
+
+const newGuest = document.createElement("li")
+const guestName = document.createElement("span")
+
+guestName.textContent = "Diego"
+
+// Adicionar após o último filho
+newGuest.append(guestName)
+newGuest.append(guestName, guestSurname)
+
+// Adicionar após o último filho, mas sem ter mais de um argumento. Mais simples que o append
+newGuest.appendChild(guestName)
+
+// Adicionar antes do último filho
+newGuest.prepend(guestSurname)
+
+// Bloquear
+input.setAttribute("disabled", true)
+
+// Mudar o tipo
+input.setAttribute("type", "file") // Transforma em arquivo
+
+// Remover atributo
+input.removeAttribute("id") // Tira o ID
+
+// Eventos
+window.addEventListener("load", () => {
+  console.log("A página foi carregada")
+})
+
+addEventListener("click", (event) => {
+  event.preventDefault () // Previne o comportamento padrão. Por exemplo: botão type submit dentro de formulário recarrega a página porque entende que quer enviar informações.
+
+  console.log(event) // Retorna todas as informações do evento.
+
+  console.log(event.target) // Retorna o elemento clicado.
+
+  console.log(event.target.textContent) // Retorna o conteúdo do texto do elemento clicado.
+})
