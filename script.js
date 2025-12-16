@@ -149,3 +149,75 @@ addEventListener("click", (event) => {
 
   console.log(event.target.textContent) // Retorna o conteúdo do texto do elemento clicado.
 })
+
+// Adicionar evento em elemento específico
+URL.addEventListener("scroll", () => {
+  if (URL.scrollTop > 300) {
+    console.log("Fim da lista")
+
+    URL.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    })
+  }
+})
+
+const button = document.querySelector("button")
+button.addEventListener("click", (event) => {
+  event.preventDefault()
+
+  console.log("clicou")
+})
+
+// Evento sem click
+form.onsubmit = (event) => { // Vai entender mesmo se for pelo enter, sem precisar clicar pelo mouse. Mas, se tiver mais de um, vai funcionar só o último.
+  event.preventDefault()
+  console.log("Você fez submit no formulário #1")
+}
+
+form.addEventListener("submit", (event) => { // Se tiver mais de um, todos vão funcionar.
+  event.preventDefault()
+  console.log("Você fez submit no formulário #2")
+})
+
+// Capturar qualquer tipo de tecla pressionada
+input.addEventListener("keydown", (event) => {
+  console.log(event)
+  console.log(event.key) // Vai mostrar só as teclas
+})
+
+// Capturar teclas do tipo caractere (letras, números, pontos, espaço, etc.)
+input.addEventListener("keypress", (event) => { // Ignora ctrl, shift...
+  console.log(event.key)
+})
+
+// Capturar quando mudar
+input.onchange = () => {
+  console.log("O input mudou")
+}
+
+// Capturar apenas letras e ignorar números com regex
+input.addEventListener("input", () => {
+  const value = input.value
+
+  const regex = /\D+/g // Identifica apenas letras
+
+  console.log(value.match(regex)) // Verifica se o valor do input confere com o padrão (regex), e se sim, retorna o que conferir.
+  
+  // Testar se atende o padrão
+  const isValid = regex.test(value) // Mesmo que tenha número, se tiver letra vai identificar como válido
+  console.log(isValid)
+})
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault()
+  const regex = /\D+/g // Identifica apenas letras
+  const value = input.value.replace(regex, "X") // Vai procurar em todos os lugares onde o padrão é atendido e substituirá por X. Para trocar por nada, aspas sem espaço ""
+  
+  // Outra forma de testar
+  if (!regex.test(value)) { // Vai procurar o contrário. Se tiver só números, vai aparecer a mensagem.
+    alert("Padrão não encontrado") // Exibe mensagem
+  }
+
+  console.log(value)
+})

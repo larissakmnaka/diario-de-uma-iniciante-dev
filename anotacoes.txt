@@ -234,6 +234,9 @@ Hue: tonalidade da cor.
 ### Como acessar variáveis CSS dentro de uma folha de estilo?
     Usando a função var(--nome-da-variável).
 
+### Como você adiciona um evento a um elemento específico no DOM usando JavaScript?
+    addEventListener("click", myFunction)
+
 ---
 ## EXTENSÕES PARA O VSCODE
 * portuguese (Brazil)
@@ -294,6 +297,7 @@ Hue: tonalidade da cor.
 * IonIcons (site de ícones)
 * Lucide (site de ícones)
 * CSS Gradient Generator (gera gradientes para usar no CSS)
+* Regexr.com (testar expressões regulares)
 
 ---
 ## PROGRAMAS
