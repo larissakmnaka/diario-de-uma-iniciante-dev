@@ -221,3 +221,16 @@ form.addEventListener("submit", (event) => {
 
   console.log(value)
 })
+
+form.onsubmit = (event) => {
+  event.preventDefault()
+
+  const value = input.value
+  const hasNumberRegex = /\d+/g // Verifica se tem número
+
+  if (hasNumberRegex.test(value)) {
+    alert("Contém número")
+  } else {
+    alert("Enviado")
+  }
+}

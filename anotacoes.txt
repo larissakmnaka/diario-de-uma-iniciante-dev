@@ -235,7 +235,19 @@ Hue: tonalidade da cor.
     Usando a função var(--nome-da-variável).
 
 ### Como você adiciona um evento a um elemento específico no DOM usando JavaScript?
-    addEventListener("click", myFunction)
+    addEventListener("click", myFunction).
+
+### Quais das opções abaixo são exemplos de valores Falsy em JavaScript?
+    0, "", null.
+    Os valores 0 (número zero), "" (string vazia) e null são todos considerados falsy, o que significa que eles avaliam como false em um contexto booleano.
+
+### Qual é a diferença entre argumentos e parâmetros em uma função?
+    Argumentos são os valores passados para a função, enquanto parâmetros são as variáveis definidas na função.
+    Lembre-se que os parâmetros são os 'espaços reservados' definidos na função para receber dados, enquanto os argumentos são os dados reais que preenchem esses espaços durante a execução da função.
+
+### O que é uma callback function em JavaScript?
+    Uma função passada como argumento para outra função.
+    Uma callback function é precisamente uma função que é passada como argumento para outra função, e esta outra função a "chama de volta" (executa) em um momento posterior.
 
 ---
 ## EXTENSÕES PARA O VSCODE
