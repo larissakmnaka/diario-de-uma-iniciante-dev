@@ -234,3 +234,244 @@ form.onsubmit = (event) => {
     alert("Enviado")
   }
 }
+
+// Mostra o tipo do objeto
+const obj = {} // Cria um objeto vazio
+console.log (typeof obj)
+
+// Cria um objeto com propriedades e métodos (funções)
+const user = {
+  email: "larissa@email.com", // Para atribuir valor dentro do objeto, usa-se dois pontos ":"
+  age: 18,
+  name: { // Pode ter um objeto dentro de outro, por exemplo, no caso de propriedades compostas. É a chamada Estrutura de Objeto Aninhado
+    first_name: "Larissa" // Para criar nomes de variáveis em objetos, usa-se snake_case para separar, ao invés do camelCase
+    surname: "Nakamura",
+  }, // A vírgula separa as propriedades
+  address: {
+    street: "Rua X",
+    number: 12,
+    city: "Marília",
+    postal_code: "12345-678"
+  },
+  message: () => { // ou function(){ }
+    console.log("Olá")
+  }, 
+}
+
+// Acessa propriedades e métodos por meio da notação de ponto "."
+console.log(user.name)
+
+// Acessa propriedades de objetos por meio da notação de ponto "."
+console.log(user.name.first_name)
+
+// Executa o método do objeto por meio da notação de ponto "."
+user.message()
+
+// Acessa propriedades e métodos por meio da notação de colchetes "[]"
+console.log(user["email"])
+
+// Acessa propriedades de objetos por meio da notação de colchetes "[]"
+console.log(user["name"]["first_name"])
+
+// Executa o método do objeto por meio da notação de colchetes "[]"
+user["message"] ()
+
+// Acessa propriedades dinamicamente
+const user = {
+  name: "Larissa",
+  message: function() {
+    console.log(`Olá, ${user.name}`)
+  },
+}
+
+user.message() 
+
+const user = {
+  name: "Larissa",
+  message: function() {
+    console.log(`Olá, ${this.name}`) // O this faz referência ao próprio objeto, ou seja, user. Assim, se o nome do usuário mudar, a mensagem continuará funcionando.
+  },
+}
+
+// Cria objeto
+const product = {
+  name: "Teclado",
+  quantity: 100,
+}
+
+console.log(product.name) // Acessa a propriedade do objeto.
+
+// Atualiza o valor de uma propriedade
+product.quantity = 90
+
+console.log(product.quantity)
+
+// Optional Chaining
+console.log(user?.address.street) // Se a propriedade não existir, retorna undefined, ao invés de dar erro.
+
+user.message?() // Se a função existir, executa. Se não, não faz nada.
+
+// Operador de coalescência nula
+let content = null
+console.log(content ?? "Conteúdo padrão") // Se content for null ou undefined, exibe o conteúdo da direita. Se tiver conteúdo, retorna o valor de content.
+
+const user = {
+  name: "Larissa",
+  picture: undefined,
+}
+
+console.log(user.picture ?? "default.png") // Se tiver imagem definida, retorna a imagem. Se não, retorna a imagem padrão.
+
+// Função construtora
+function createProduct(name) {
+  const product = {}
+
+  product.name = name
+  product.message = function() {
+    console.log(`O nome do produto é ${this.name}`)
+  }
+
+  return product
+}
+
+const product1 = new createProduct("Teclado") // O new cria um novo objeto utilizando a estrutura da função construtora.
+console.log(product1.name)
+product1.details() // Com a mesma função construtora (estrutura), é possível criar objetos diferentes. Por isso são cópias, embora os objetos sejam diferentes.
+
+// Exemplos de funções construtoras disponíveis no JavaScript
+let myName = new String("Larissa") // Cria um objeto do tipo String.
+console.log(myName) // String {"Larissa"}
+
+let price = "40.6" replace(".", "") // Substitui o ponto por nada, ou seja, remove o ponto.
+console.log(price) // 406
+
+let date = new Date("2026-05-07") // Cria um objeto do tipo data.
+console.log(date) // Thu May 07 2026 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+
+// Manipulação de textos
+
+let message = "Estou estudando os fundamentos do Javascript." // Conteúdo da variável chamada "message".
+
+console.log(message)
+
+// Exibe o texto em maiúsculo
+console.log(message.toUpperCase()) // Não muda o conteúdo, só altera a exibição.
+
+// Exibe o texto em minúsculo
+console.log(message.toLowerCase())
+
+// Identifica o comprimento de uma string
+console.log(message.length) // Conta o espaço também. 
+
+// Valida caracteres
+let password = "12345"
+
+if (password.length < 6) {
+  console.log("A senha deve ter ao menos 6 caracteres")
+}
+
+// Identifica quantos dígitos tem um número
+let value = 12345
+
+console.log(String(value).length) // Se usasse o typeof apenas no console.log(typeof value) , apareceria que é um number - e a propriedade lenght só existe para string. Por isso faz a conversão.
+console.log(value.toString().length) // Método que converte para texto string.
+
+// Substitui parte de um texto
+console.log(message.replace("Javascript", "HTML")) // O método replace tem dois parâmetros string (o que quer substituir e pelo o quê quer substituir). Não altera o conteúdo.
+
+// Extrai uma parte da string (start, end)
+console.log(message.slice(6, 30))
+
+// Extrai uma parte da string de trás para frente
+console.log(message.slice(-11))
+
+// Remove espaços no início e no final da string
+let textWithSpace = "     Texto de exemplo    "
+console.log(textWithSpace.length) // Quantidade de caracteres
+
+console.log(textWithSpace.trim()) // Método que remove os espaços.
+console.log(textWithSpace.trim().length) // Quantidade de caracteres diminuída.
+
+// O padStart preenche a string do início
+const creditCard = "1234567812341226"
+const lastDigits = creditCard.slice(-4) // Pega os últimos 4 dígitos.
+console.log(lastDigits) // 1226
+const maskedNumber = lastDigits.padStart(creditCard.length, "X") // Preenche o restante da string com X, até atingir o comprimento total do número do cartão.
+console.log(maskedNumber) // XXXXXXXXXXXX1226
+
+// O padEnd preenche a string do final
+const number = "123"
+console.log(number.padEnd(10, "#")) // Preenche o restante da string com #, até atingir o comprimento total de 10 caracteres. Resultado: 123########
+
+// Separa a string
+let text = "Estudar, Aprender, Praticar"
+
+let separate = text.split(",")
+console.log(separate) // Retorna um array com os elementos separados.
+
+// Une a string
+let joined = separate.join(" - ") // Junta os elementos do array em uma string, usando " - " como separador.
+console.log(joined) // Estudar - Aprender - Praticar
+
+// Obtém a posição da palavra
+let message = "Estou estudando os fundamentos do Javascript."
+console.log(message.indexOf("fundamentos")) // Retorna a posição da palavra, ou seja, o número do caractere onde começa a palavra. 
+
+// Se não encontrar, retorna -1
+console.log(message.indexOf("javascript")) // -1
+
+// Verifica se a palavra existe na string
+console.log(message.includes("Javascript")) // Retorna true ou false, dependendo se a palavra existe ou não. É case sensitive, ou seja, diferencia maiúscula de minúscula.
+
+console.log(message.toLowerCase().includes("javascript")) // Para ignorar a diferença entre maiúscula e minúscula, pode converter tudo para minúscula antes de verificar.
+
+// Cria array com construtor
+const newArray = new Array() // Cria um array vazio.
+
+// Cria array com 10 posições vazias
+const available = new Array(10)
+console.log(available) // [empty × 10]
+
+// Mostra a quantidade de itens do array
+let fruits = ["Apple", "Banana", "Orange"]
+console.log(fruits.length) // 3
+
+// Acessa o item do array pelo índice (index)
+console.log(fruits[0]) // Apple (o índice começa em 0).
+
+// Obtém dinamicamente o último item do array
+console.log(fruits[fruits.length - 1]) // Orange (o índice do último item é sempre a quantidade total de itens menos 1).
+
+// Verifica se o item existe no array
+console.log(fruits.includes("Banana")) // true
+
+// Cria um array com os nomes separando pelo espaço
+let fullName = "Larissa Nakamura"
+console.log(fullName.split(" ")) // ["Larissa", "Nakamura"]
+
+// Cria um array separando cada letra
+console.log(Array.from(fullName)) // ["L", "a", "r", "i", "s", "s", "a", " ", "N", "a", "k", "a", "m", "u", "r", "a"]
+
+// Adiciona um item no final do array
+fruits.push("Grapes")
+console.log(fruits) // ["Apple", "Banana", "Orange", "Grapes"]
+
+// Adiciona um item no início do array
+fruits.unshift("Strawberry")
+console.log(fruits) // ["Strawberry", "Apple", "Banana", "Orange", "Grapes"]
+
+// Remove o primeiro item do array
+fruits.shift()
+console.log(fruits) // ["Apple", "Banana", "Orange", "Grapes"]
+
+// Remove o último item do array
+fruits.pop()
+console.log(fruits) // ["Apple", "Banana", "Orange"]
+
+// Encontra e retorna o índice do elemento no array
+let position = fruits.indexOf("Banana")
+console.log(position) // 1
+
+// Remove um item específico do array usando o índice
+fruits.splice(position, 1) // O primeiro parâmetro é o índice onde começa a remoção, e o segundo é a quantidade de itens a remover.
+console.log(fruits) // ["Apple", "Orange"]

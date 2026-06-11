@@ -216,6 +216,31 @@ Case sensitive: sensível a letras maiúsculas e minúsculas.
 
 Hue: tonalidade da cor.
 
+Optional chaining (?.): encadeamento opcional. Se a propriedade ou função chamada é nullish (null or undefined), a expressão retorna undefined em vez de gerar um erro.
+    Útil ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
+    Ex. foto do usuário (pode ser opcional).
+
+Operador de coalescência nula (??): operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined. Caso contrário, ele retorna o seu operando do lado esquerdo.
+
+Função construtora: função que cria um objeto e retorna um objeto, quando instanciada (cópia do objeto na memória. Declara com "new).
+
+Propriedade: dado armazenado no objeto. gato.nome // lê um valor
+
+Método: função armazenada no objeto. Executa uma ação. gato.miar() // executa uma ação
+
+Propriedade é algo. Método faz algo.
+
+Array é uma coleção ordenada de valores. Podemos comparar um array a uma lista, onde cada item da lista possui uma posição específica, conhecida como índice.
+
+Quando eu uso .push("x") , eu estou "empurrando" → adiciono no fim do array.
+Quando eu uso .pop(), eu estou "estourando/tirando" → removo do fim do array.
+Quando eu uso .unshift("x") , eu estou "desfazendo o shift/empurrando tudo para a direita → adiciona no início do array.
+Quando eu uso .shift() , eu estou "deslocando/removendo o primeiro item e deslocando tudo para a esquerda" → removo do início do array.
+
+Unshift = desfazer o shift → o oposto de remover é adicionar. O prefixo un indica reversão da ação, não necessariamente "tirar".
+Shift = deslocar (remove do início, todos movem para a esquerda)
+
+Repetição: executa um bloco de código várias vezes de acordo com uma condição específica.
 ---
 ## CORREÇÕES DE QUIZZES
 
@@ -249,6 +274,20 @@ Hue: tonalidade da cor.
     Uma função passada como argumento para outra função.
     Uma callback function é precisamente uma função que é passada como argumento para outra função, e esta outra função a "chama de volta" (executa) em um momento posterior.
 
+### É um exemplo correto da sintaxe da declaração de um objeto vazio:
+    const obj = {};
+
+### O que o operador de coalescência nula faz em javascript?
+    O operador de coalescência nula não tem a função de remover propriedades nulas de uma expressão ou objeto. Ele opera na seleção de valores dentro de uma expressão, decidindo qual valor usar com base na sua nulidade ou indefinição, mas não altera a estrutura de dados existente removendo propriedades.
+
+### Usamos o método indexOf() para:
+    O método indexOf() não é utilizado para verificar o tipo de dado de uma variável. Para essa finalidade, geralmente empregamos operadores como typeof em JavaScript, que retornam uma string indicando o tipo de dado. O indexOf() tem uma função completamente diferente, relacionada à busca de valores.
+
+### É um exemplo correto de sintaxe para criar um array de 10 posições usando um construtor em Javascript:
+    A sintaxe new Array[10] está incorreta. Colchetes [] são usados para acessar elementos específicos de um array ou para definir um array literal diretamente. Para invocar o construtor da classe Array e especificar seu tamanho inicial, deve-se usar parênteses ().
+
+### Para alterar o conteúdo de um array, adicionando novos elementos e removendo elementos antigos, usamos o método:
+    Splice é o único método que adiciona e remove ao mesmo tempo, no meio do array. Os outros métodos fazem só uma coisa. Ex. push/unshift só adicionam e pop/shift só removem. 
 ---
 ## EXTENSÕES PARA O VSCODE
 * portuguese (Brazil)
@@ -308,6 +347,7 @@ Hue: tonalidade da cor.
 * Whimsical (mapa mental)
 * IonIcons (site de ícones)
 * Lucide (site de ícones)
+* Hugeicons (site de ícones)
 * CSS Gradient Generator (gera gradientes para usar no CSS)
 * Regexr.com (testar expressões regulares)
 
