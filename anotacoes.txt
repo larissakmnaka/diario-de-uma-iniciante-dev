@@ -241,6 +241,15 @@ Unshift = desfazer o shift → o oposto de remover é adicionar. O prefixo un in
 Shift = deslocar (remove do início, todos movem para a esquerda)
 
 Repetição: executa um bloco de código várias vezes de acordo com uma condição específica.
+
+Loop infinito sobrecarrega.
+
+Iteração: "volta" da repetição.
+
+Break: encerra a execução da repetição e segue para a instrução seguinte = o código que vem depois do loop inteiro.
+
+Continue: encerra a execução desta iteração e segue para a próxima iteração.
+
 ---
 ## CORREÇÕES DE QUIZZES
 
@@ -288,6 +297,9 @@ Repetição: executa um bloco de código várias vezes de acordo com uma condiç
 
 ### Para alterar o conteúdo de um array, adicionando novos elementos e removendo elementos antigos, usamos o método:
     Splice é o único método que adiciona e remove ao mesmo tempo, no meio do array. Os outros métodos fazem só uma coisa. Ex. push/unshift só adicionam e pop/shift só removem. 
+
+### Usamos a palavra reservada break quando queremos:
+    Embora break interrompa um fluxo de execução, ele não encerra o programa inteiro. Sua ação é limitada ao loop ou estrutura condicional aninhada mais próxima em que está inserido. O programa continua executando as instruções que vêm após o bloco interrompido.
 ---
 ## EXTENSÕES PARA O VSCODE
 * portuguese (Brazil)

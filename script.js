@@ -475,3 +475,122 @@ console.log(position) // 1
 // Remove um item específico do array usando o índice
 fruits.splice(position, 1) // O primeiro parâmetro é o índice onde começa a remoção, e o segundo é a quantidade de itens a remover.
 console.log(fruits) // ["Apple", "Orange"]
+
+// Executa um bloco de código enquanto a condição seja verdadeira
+let execute = true
+while (execute) {
+  let responde = window.prompt("Deseja continuar? 1 (sim) ou 2 (não)") // Exibe uma caixa de diálogo para o usuário inserir uma resposta.
+
+  if (responde === "2") {
+    execute = false
+  }
+}
+
+console.log("Fim do loop")
+
+// Repete a condição enquanto for verdadeira, mas a verificação é feita depois da execução do código, ou seja, o código é executado pelo menos uma vez.
+let value = 0
+do {
+  value++
+  console.log(value)
+} while (value < 5) // O código vai ser executado enquanto o valor for menor que 5. Mesmo quando chegar em 5, o código já terá sido executado, por isso o resultado é de 1 a 5.
+
+console.log("Fim do loop")
+
+// Repete a condição enquanto for verdadeira. Possui variável de controle, condição de parada e incremento ou decremento da variável de controle.
+for (let i = 0; i < 5; i++) { // O código vai ser executado enquanto o valor de i for menor que 5. O i++ é o incremento, ou seja, a cada execução do código, o valor de i aumenta em 1.
+  console.log(i) // O resultado é de 0 a 4, porque o código é executado antes da verificação da condição. Quando chegar em 5, a condição já não será mais verdadeira, e o loop vai parar.
+}
+
+// Exemplos de tabuada
+console.log(`7x0 = ${7*0}`)
+console.log(`7x1 = ${7*1}`)
+console.log(`7x2 = ${7*2}`)
+console.log(`7x3 = ${7*3}`)
+console.log(`7x4 = ${7*4}`)
+console.log(`7x5 = ${7*5}`)
+console.log(`7x6 = ${7*6}`)
+console.log(`7x7 = ${7*7}`)
+console.log(`7x8 = ${7*8}`)
+console.log(`7x9 = ${7*9}`)
+console.log(`7x10 = ${7*10}`)
+
+let number = 7
+for (let i = 0; i <= 10; i++) {
+  console.log(`${number}x${i} = ${number*i}`)
+}
+
+// Executa iterações a partir de um objeto e percorre as propriedades
+let user = {
+  name: "Larissa",
+  surname: "Nakamura",
+  email: "larissa@email.com",
+}
+
+for (let property in user) { 
+  console.log(property) // Exibe o nome da propriedade, não o conteúdo.
+  console.log(user[property]) // Exibe o conteúdo da propriedade. Para acessar o valor, é necessário usar a notação de colchetes, porque a notação de ponto não funciona com variáveis.
+}
+
+// Percorre os índices do array e exibe cada elemento pelo índice
+let fruits = ["Apple", "Banana", "Orange"]
+
+for (let index in fruits) {
+  console.log(index) // Exibe o índice do elemento.
+  console.log(fruits[index]) // Exibe o elemento do array correspondente ao índice.
+}
+
+// Itera sobre valores de um objeto iterável, como o array
+let students = ["Maria", "João", "Pedro"]
+
+for (let student of students) {
+  console.log(student) // Exibe o valor do elemento, ou seja, o nome do estudante. Diferente do for...in, o for...of não exibe o índice, apenas o valor.
+}
+
+// Para um objeto não iterável, pode transformar em array
+let user = [
+  {
+    name: "Larissa",
+    surname: "Nakamura",
+    email: "larissa@email.com",
+  },
+]
+
+for (let value of user) {
+  console.log(value) // Pode acessar console.log(value.name) para acessar o nome, por exemplo.
+}
+
+// Encerra a execução da repetição ou switch para seguir para a instrução seguinte
+let option = 3
+
+switch (option) {
+  case 1:
+    console.log("Cadastrar")
+    break // Sem o break, executaria todos os cases válidos. O break é necessário para interromper a execução do switch após encontrar o case correspondente.
+  case 2:
+    console.log("Atualizar")
+    break
+  case 3:
+    console.log("Remover")
+    break
+  default:
+    console.log("Opção inválida")
+    break
+}
+
+// Finaliza a repretição
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break // O loop vai parar quando i for igual a 5, ou seja, o resultado será de 0 a 4.
+  }
+
+  console.log(i)
+}
+
+// Encerra/pula a iteração atual e continua para a próxima
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue // O loop vai pular a iteração quando i for igual a 5, ou seja, o resultado será de 0 a 4 e de 6 a 9.
+  }
+  console.log(i)
+}
