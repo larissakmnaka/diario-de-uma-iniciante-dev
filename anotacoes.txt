@@ -300,6 +300,9 @@ Continue: encerra a execução desta iteração e segue para a próxima iteraç�
 
 ### Usamos a palavra reservada break quando queremos:
     Embora break interrompa um fluxo de execução, ele não encerra o programa inteiro. Sua ação é limitada ao loop ou estrutura condicional aninhada mais próxima em que está inserido. O programa continua executando as instruções que vêm após o bloco interrompido.
+
+### Qual método usamos quando queremos modificar apenas o dia de uma data?
+    Em JavaScript, o método setDate() é usado para definir o dia do mês para um objeto Date existente. Ele recebe um número inteiro que representa o dia, de 1 a 31.
 ---
 ## EXTENSÕES PARA O VSCODE
 * portuguese (Brazil)

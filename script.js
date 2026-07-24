@@ -594,3 +594,136 @@ for (let i = 0; i < 10; i++) {
   }
   console.log(i)
 }
+
+// Exibe data e hora atual
+console.log(new Date()) // Retorna a data e hora atual do sistema.
+
+// Exibe a data e hora de referência (considera o fuso)
+console.log(new Date(0)) // Retorna a data e hora de referência (01/01/1970 00:00:00 GMT).
+
+// Exibe o número de milissegundos desde a data de referência
+console.log(new Date().getTime()) // Retorna o número de milissegundos desde a data de referência (01/01/1970 00:00:00 GMT) até a data e hora atual do sistema.
+
+// Define data com ano, mês (0-11), e dia
+console.log(new Date(2026, 6, 12)) // Retorna a data definida (12/07/2026 00:00:00 GMT).
+
+// Define data com ano, mês (0-11), dia, hora, minuto e segundo
+console.log(new Date(2026, 6, 12, 15, 30, 0)) // Retorna a data e hora definida (12/07/2026 15:30:0 GMT).
+
+// Define data e hora com string
+console.log(new Date("2026-07-12T15:30:00")) // Retorna a data e hora definida (12/07/2026 15:30:0 GMT).
+
+console.log(new Date("July 12, 2026 15:30:00")) // Retorna a data e hora definida (12/07/2026 15:30:0 GMT).
+
+// Retorna o dia da semana de 0 a 6 (domingo é 0)
+console.log(date.getDay()) 
+
+// Retorna o dia do mês de 1 a 31
+console.log(date.getDate())
+
+// Retorna o mês de 0 a 11 (janeiro é 0)
+console.log(date.getMonth() +1)
+
+// Retorna o ano com 4 dígitos
+console.log(date.getFullYear())
+
+// Retorna a hora de 0 a 23
+console.log(date.getHours())
+
+// Retorna os minutos de 0 a 59
+console.log(date.getMinutes())
+
+// Retorna os segundos de 0 a 59
+console.log(date.getSeconds())
+
+// Modifica o ano
+date.setFullYear(2025) // Modifica o ano para 2025.
+
+// Modifica o mês (janeiro é 0)
+date.setMonth(0) // Modifica o mês para janeiro.
+
+// Modifica o dia do mês
+date.setDate(15) // Modifica o dia do mês para 15.
+
+// Modifica a hora
+date.setHours(10) // Modifica a hora para 10.
+
+// Modifica os minutos
+date.setMinutes(30) // Modifica os minutos para 30.
+
+// Modifica os segundos
+date.setSeconds(45) // Modifica os segundos para 45.
+
+// Formata o dia para sempre ter 2 dígitos
+console.log(date.getDate().toString().padStart(2, "0")) // Se o dia for menor que 10, adiciona um 0 na frente. Exemplo: 05.
+
+// Formata o mês para sempre ter 2 dígitos
+console.log((date.getMonth() + 1).toString().padStart(2, "0")) // Se o mês for menor que 10, adiciona um 0 na frente. Exemplo: 05.
+
+// Retorna somente a data
+console.log(date.toDateString()) // Retorna a data no formato "Sat Jul 12 2025".
+
+// Retorna somente a hora
+console.log(date.toTimeString()) // Retorna a hora no formato "10:30:45 GMT-0300 (Horário Padrão de Brasília)".
+
+// Exibe a data e hora no formato local
+console.log(date.toLocaleString()) // Retorna a data e hora no formato local, por exemplo, "12/07/2025 10:30:45". 
+console.log(date.toLocaleDateString()) // Retorna a data no formato local, por exemplo, "12/07/2025".
+console.log(date.toLocaleTimeString()) // Retorna a hora no formato local, por exemplo, "10:30:45".
+
+// Exibe a data e hora no formato escolhido
+console.log(date.toLocaleDateString("en")) // Retorna a data no formato inglês, por exemplo, "07/12/2025".
+console.log(date.toLocaleTimeString("en")) // Retorna a hora no formato inglês, por exemplo, "10:30:45 AM".
+
+// Exibe a data e hora em styles diferentes
+console.log(
+  date.toLocaleString("pt-BR", {
+    dateStyle: "short", // Exibe a data no formato curto, por exemplo, "12/07/2025".
+  })
+)
+
+console.log(
+  date.toLocaleString("pt-BR", {
+    dateStyle: "long", // Exibe a data por extenso, por exemplo, "12 de julho de 2025".
+  })
+)
+
+console.log(
+  date.toLocaleString("pt-BR", {
+    dateStyle: "medium", // Exibe a data no formato médio, por exemplo, "12 de jul de 2025".
+  })
+)
+
+console.log(
+  date.toLocaleString("pt-BR", {
+    dateStyle: "full", // Exibe a data completa, por exemplo, "sábado, 12 de julho de 2025".
+  })
+)
+
+console.log(
+  date.toLocaleString("pt-BR", {
+    day: "2-digit", // Exibe o dia com 2 dígitos, por exemplo, "12".
+    month: "2-digit", 
+    hour: "2-digit", 
+    minute: "2-digit", 
+  })
+)
+
+// Outro exemplo de manipulação
+let amount = 12.5
+console.log(
+  amount.toLocaleString("pt-BR", { 
+    style: "currency", 
+    currency: "BRL", // Retorna o valor formatado como moeda brasileira, por exemplo, "R$ 12,50".
+  })) 
+
+  // Obtém informações da localidade
+  const correntLocale = Intl.DateTimeFormat().resolvedOptions() // Intl é a API de Internacionalização do ECMAScript.
+  console.log(correntLocale) // Retorna informações da localidade, como idioma, país, fuso horário, etc.
+
+  // Obtém a diferença em minutos do timezone local em relação ao UTC (Coordinated Universal Time)
+  console.log(date.getTimezoneOffset()) // Retorna a diferença em minutos do timezone local em relação ao UTC. Exemplo: -180 significa que o timezone local está 3 horas atrás do UTC.
+
+  // Obtém a diferença em horas do timezone local em relação ao UTC
+  console.log(date.getTimezoneOffset() / 60) // Retorna a diferença em horas do timezone local em relação ao UTC. Exemplo: -3 significa que o timezone local está 3 horas atrás do UTC.
+
